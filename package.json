@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:webtoolkit": "node dist/webtoolkit/server/server.mjs",
 
-    "generate:component": "ng generate component baseconverter"
+    "generate:component": "ng generate component"
   },
   "private": true,
   "dependencies": {
