@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // component
-import { BaseconverterComponent } from './baseconverter/baseconverter.component';
+import { BaseconverterComponent } from './features/baseconverter/baseconverter.component';
 
 @Component({
   selector: 'app-root',
