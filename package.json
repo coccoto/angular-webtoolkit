@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:webtoolkit": "node dist/webtoolkit/server/server.mjs"
+    "serve:ssr:webtoolkit": "node dist/webtoolkit/server/server.mjs",
+
+    "generate:component": "ng generate component baseconverter"
   },
   "private": true,
   "dependencies": {
