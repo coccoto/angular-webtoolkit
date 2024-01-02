@@ -2,12 +2,20 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // component
+import { HeaderComponent } from '@/app/shared/header/header.component';
 import { BaseconverterComponent } from '@/app/features/baseconverter/baseconverter.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, BaseconverterComponent],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    // component
+    HeaderComponent,
+    BaseconverterComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass',
 })

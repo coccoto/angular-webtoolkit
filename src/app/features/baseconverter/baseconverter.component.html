@@ -1,1 +1,14 @@
-<div>TEST</div>
+<div class='container'>
+    <div class='wrapper'>
+
+        <div>
+            <label>
+                <div>2進数</div>
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder='111' (input)='onInput()' [(ngModel)]="baseNumber">
+                </mat-form-field>
+            </label>
+        </div>
+        
+    </div>
+</div>
