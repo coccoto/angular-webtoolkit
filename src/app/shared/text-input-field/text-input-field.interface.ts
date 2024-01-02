@@ -2,7 +2,9 @@ export interface TextInputFieldResultInterface {
     elemName: string,
     inputValue: string,
 }
-export const TextInputFieldResultDefault: TextInputFieldResultInterface = {
-    elemName: '',
-    inputValue: '',
+export const initializeTextInputFieldResult = ():TextInputFieldResultInterface => {
+    return {
+        elemName: '',
+        inputValue: '',
+    }
 }

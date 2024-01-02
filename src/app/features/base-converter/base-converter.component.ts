@@ -4,7 +4,7 @@ import { TextInputFieldComponent } from '@/app/shared/text-input-field/text-inpu
 // service
 import { BaseConverterService } from '@/app/features/base-converter/base-converter.service'
 // interface
-import { BaseInputFormInterface, baseInputFormDefault } from '@/app/features/base-converter/base-converter.interface'
+import { BaseInputFormInterface, initializeBaseInputForm } from '@/app/features/base-converter/base-converter.interface'
 import { TextInputFieldResultInterface } from '@/app/shared/text-input-field/text-input-field.interface'
 
 @Component({
@@ -17,10 +17,9 @@ import { TextInputFieldResultInterface } from '@/app/shared/text-input-field/tex
 export class BaseConverterComponent {
 
   baseConverterService: BaseConverterService = new BaseConverterService()
-
-  currentBaseInputForm: BaseInputFormInterface = baseInputFormDefault
+  baseInputForm: BaseInputFormInterface = initializeBaseInputForm()
 
   baseConvert(targetObject: TextInputFieldResultInterface): void {
-    this.currentBaseInputForm = this.baseConverterService.baseConvert(Number(targetObject.elemName), targetObject.inputValue)
+    this.baseInputForm = this.baseConverterService.baseConvert(Number(targetObject.elemName), targetObject.inputValue)
   }
 }
