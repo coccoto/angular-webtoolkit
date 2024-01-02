@@ -1,1 +1,12 @@
-<p>text-input-field works!</p>
+<div>
+    <label>
+        <div>{{ label }}</div>
+        <mat-form-field appearance="outline">
+            <input
+                matInput
+                [(ngModel)]="inputValue"
+                (input)='handleInput()'
+                placeholder='{{ placeholder }}'>
+        </mat-form-field>
+    </label>
+</div>

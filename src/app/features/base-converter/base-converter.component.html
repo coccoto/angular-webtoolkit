@@ -1,14 +1,28 @@
 <div class='container'>
     <div class='wrapper'>
-
-        <div>
-            <label>
-                <div>2進数</div>
-                <mat-form-field appearance="outline">
-                    <input matInput placeholder='111' (input)='onInput()' [(ngModel)]="baseNumber">
-                </mat-form-field>
-            </label>
-        </div>
-        
+        <app-text-input-field
+            (inputEvent)="baseConvert($event)"
+            elemName='base_02'
+            label=''
+            placeholder='10100000'
+        ></app-text-input-field>
+        <app-text-input-field
+            (inputEvent)="baseConvert($event)"
+            elemName='base_08'
+            label=''
+            placeholder='240'
+        ></app-text-input-field>
+        <app-text-input-field
+            (inputEvent)="baseConvert($event)"
+            elemName='base_10'
+            label=''
+            placeholder='160'
+        ></app-text-input-field>
+        <app-text-input-field
+            (inputEvent)="baseConvert($event)"
+            elemName='base_16'
+            label=''
+            placeholder='A0'
+        ></app-text-input-field>
     </div>
 </div>
