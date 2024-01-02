@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaseconverterComponent } from './baseconverter.component';
+import { BaseConverterComponent } from './base-converter.component';
 
-describe('BaseconverterComponent', () => {
-  let component: BaseconverterComponent;
-  let fixture: ComponentFixture<BaseconverterComponent>;
+describe('BaseConverterComponent', () => {
+  let component: BaseConverterComponent;
+  let fixture: ComponentFixture<BaseConverterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BaseconverterComponent]
+      imports: [BaseConverterComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BaseconverterComponent);
+    fixture = TestBed.createComponent(BaseConverterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

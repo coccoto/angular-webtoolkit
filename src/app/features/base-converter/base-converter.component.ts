@@ -4,13 +4,13 @@ import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 
 @Component({
-  selector: 'app-baseconverter',
+  selector: 'app-base-converter',
   standalone: true,
   imports: [MatInputModule, FormsModule],
-  templateUrl: './baseconverter.component.html',
-  styleUrl: './baseconverter.component.sass'
+  templateUrl: './base-converter.component.html',
+  styleUrl: './base-converter.component.sass'
 })
-export class BaseconverterComponent {
+export class BaseConverterComponent {
   baseNumber: string = '';
 
   onInput() {

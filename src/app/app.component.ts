@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // component
 import { HeaderComponent } from '@/app/shared/header/header.component';
-import { BaseconverterComponent } from '@/app/features/baseconverter/baseconverter.component';
+import { BaseConverterComponent } from '@/app/features/base-converter/base-converter.component';
 
 
 @Component({
@@ -14,7 +14,7 @@ import { BaseconverterComponent } from '@/app/features/baseconverter/baseconvert
     RouterOutlet,
     // component
     HeaderComponent,
-    BaseconverterComponent,
+    BaseConverterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass',
