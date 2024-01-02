@@ -2,26 +2,30 @@
     <div class='wrapper'>
         <app-text-input-field
             (inputEvent)="baseConvert($event)"
-            elemName='base_02'
-            label=''
+            elemName='2'
+            [inputValue]='currentBaseInputForm.binary'
+            label='2進数'
             placeholder='10100000'
         ></app-text-input-field>
         <app-text-input-field
             (inputEvent)="baseConvert($event)"
-            elemName='base_08'
-            label=''
+            elemName='8'
+            [inputValue]='currentBaseInputForm.octal'
+            label='8進数'
             placeholder='240'
         ></app-text-input-field>
         <app-text-input-field
             (inputEvent)="baseConvert($event)"
-            elemName='base_10'
-            label=''
+            elemName='10'
+            [inputValue]='currentBaseInputForm.decimal'
+            label='10進数'
             placeholder='160'
         ></app-text-input-field>
         <app-text-input-field
             (inputEvent)="baseConvert($event)"
-            elemName='base_16'
-            label=''
+            elemName='16'
+            [inputValue]='currentBaseInputForm.hexadecimal'
+            label='16進数'
             placeholder='A0'
         ></app-text-input-field>
     </div>

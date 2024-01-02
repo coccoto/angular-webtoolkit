@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core'
 import { Output, EventEmitter } from '@angular/core'
+// interface
+import { TextInputFieldResultInterface } from '@/app/shared/text-input-field/text-input-field.interface'
 // Angular Material
 import {FormsModule} from '@angular/forms'
 import {MatInputModule} from '@angular/material/input'
@@ -14,17 +16,16 @@ import {MatInputModule} from '@angular/material/input'
 export class TextInputFieldComponent {
 
   @Input() elemName: string = ''
+  @Input() inputValue: string = '';
   @Input() label: string = ''
   @Input() placeholder: string = ''
 
-  @Output() inputEvent = new EventEmitter<{elemName: String, value: String}>()
+  @Output() inputEvent = new EventEmitter<TextInputFieldResultInterface>()
 
-  inputValue: string = '';
-
-  handleInput() {
-    const result = {
+  handleInput(): void {
+    const result: TextInputFieldResultInterface = {
       elemName: this.elemName,
-      value: this.inputValue,
+      inputValue: this.inputValue,
     }
     this.inputEvent.emit(result)
   }
