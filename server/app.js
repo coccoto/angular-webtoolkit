@@ -10,7 +10,7 @@ const app = Express()
 /**
  * static setup
  */
-app.use(Express.static(ROOT + '/client/dist'))
+app.use(Express.static(ROOT + '/client/dist/webtoolkit/browser/'))
 
 /**
  * request option

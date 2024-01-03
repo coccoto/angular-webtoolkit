@@ -2,7 +2,7 @@ const PathController = require(ROOT + '/server/src/controllers/pathController')
 
 module.exports = (app) => {
     app.route(['/', '/base-converter']).get((req, res) => {
-        res.sendFile(ROOT + '/client/dist/index.html')
+        res.sendFile(ROOT + '/client/dist/webtoolkit/browser/index.html')
         return
     })
 
