@@ -1,3 +1,10 @@
-<app-header></app-header>
-<app-sidenav></app-sidenav>
-<app-base-converter></app-base-converter>
+<mat-sidenav-container class='mat-sidenav-container'>
+    <mat-sidenav #sidenav mode="side">
+          <div>mat-sidenav</div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header></app-header>
+        <app-sidenav></app-sidenav>
+        <app-base-converter></app-base-converter>
+    </mat-sidenav-content>
+</mat-sidenav-container>
