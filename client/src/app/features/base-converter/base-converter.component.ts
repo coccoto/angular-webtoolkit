@@ -16,7 +16,8 @@ import { InputFieldResultInterface } from '@/app/shared/input-field/input-field.
 })
 export class BaseConverterComponent {
 
-  private baseConverterService: BaseConverterService = new BaseConverterService()
+  constructor(private baseConverterService: BaseConverterService) { }
+
   baseInputForm: BaseInputFormInterface = initializeBaseInputForm()
 
   baseConvert(targetObject: InputFieldResultInterface): void {
