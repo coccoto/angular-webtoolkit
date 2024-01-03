@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextInputFieldComponent } from './text-input-field.component';
+import { SidenavComponent } from './sidenav.component';
 
-describe('TextInputFieldComponent', () => {
-  let component: TextInputFieldComponent;
-  let fixture: ComponentFixture<TextInputFieldComponent>;
+describe('SidenavComponent', () => {
+  let component: SidenavComponent;
+  let fixture: ComponentFixture<SidenavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TextInputFieldComponent]
+      imports: [SidenavComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TextInputFieldComponent);
+    fixture = TestBed.createComponent(SidenavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,32 +1,35 @@
 <div class='container'>
-    <div class='wrapper'>
-        <app-text-input-field
+    <div class='wrapper-head'>
+        <h1>進数変換</h1>
+    </div>
+    <div class='wrapper-main'>
+        <app-input-field
             (inputEvent)="baseConvert($event)"
             elemName='2'
             [inputValue]='baseInputForm.binary'
             label='2進数'
             placeholder='10100000'
-        ></app-text-input-field>
-        <app-text-input-field
+        ></app-input-field>
+        <app-input-field
             (inputEvent)="baseConvert($event)"
             elemName='8'
             [inputValue]='baseInputForm.octal'
             label='8進数'
             placeholder='240'
-        ></app-text-input-field>
-        <app-text-input-field
+        ></app-input-field>
+        <app-input-field
             (inputEvent)="baseConvert($event)"
             elemName='10'
             [inputValue]='baseInputForm.decimal'
             label='10進数'
             placeholder='160'
-        ></app-text-input-field>
-        <app-text-input-field
+        ></app-input-field>
+        <app-input-field
             (inputEvent)="baseConvert($event)"
             elemName='16'
             [inputValue]='baseInputForm.hexadecimal'
             label='16進数'
             placeholder='A0'
-        ></app-text-input-field>
+        ></app-input-field>
     </div>
 </div>

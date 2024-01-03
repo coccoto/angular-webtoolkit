@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 // component
 import { HeaderComponent } from '@/app/shared/header/header.component';
+import { SidenavComponent } from '@/app/shared/sidenav/sidenav.component';
 import { BaseConverterComponent } from '@/app/features/base-converter/base-converter.component';
-
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ import { BaseConverterComponent } from '@/app/features/base-converter/base-conve
     RouterOutlet,
     // component
     HeaderComponent,
+    SidenavComponent,
     BaseConverterComponent,
   ],
   templateUrl: './app.component.html',
