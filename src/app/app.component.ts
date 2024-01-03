@@ -27,11 +27,5 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 export class AppComponent {
   title = 'webtoolkit';
 
-  @ViewChild('sidenav') private sidenav: MatSidenav | undefined;
-
-  toggleSidenav(): void {
-    if (this.sidenav !== undefined) {
-      this.sidenav.toggle()
-    }
-  }
+  @ViewChild('sidenav') sidenav: MatSidenav | undefined;
 }
