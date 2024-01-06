@@ -1,29 +1,33 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { firstValueFrom } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiManagerService {
 
-  private origin: string = 'https://localhost:3200'
+  private origin: string = 'http://localhost:3200'
 
   constructor(private http: HttpClient) { }
 
-  get(endpoint: string, headers: HttpHeaders): Observable<any> {
-    return this.http.get(this.origin + endpoint, { headers })
+  get(endpoint: string): Promise<any> {
+    const result = this.http.get(this.origin + endpoint)
+    return firstValueFrom(result)
   }
 
-  post(endpoint: string, data: any, headers: HttpHeaders): Observable<any> {
-    return this.http.post(this.origin + endpoint, data, { headers })
+  post(endpoint: string, data: any): Promise<any> {
+    const result = this.http.post(this.origin + endpoint, data)
+    return firstValueFrom(result)
   }
 
-  put(endpoint: string, data: any, headers: HttpHeaders): Observable<any> {
-    return this.http.put(this.origin + endpoint, data, { headers })
+  put(endpoint: string, data: any): Promise<any> {
+    const result = this.http.put(this.origin + endpoint, data)
+    return firstValueFrom(result)
   }
 
-  delete(endpoint: string, headers: HttpHeaders): Observable<any> {
-    return this.http.delete(this.origin + endpoint, { headers })
+  delete(endpoint: string): Promise<any> {
+    const result = this.http.delete(this.origin + endpoint)
+    return firstValueFrom(result)
   }
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// service
+import { SidenavService } from '@/app/shared/sidenav/sidenav.service'
 
 @Component({
   selector: 'app-sidenav',
@@ -9,4 +11,11 @@ import { Component } from '@angular/core';
 })
 export class SidenavComponent {
 
+  constructor(private sidenavService: SidenavService) {
+    this.assembleMenu()
+  }
+
+  async assembleMenu() {
+    await console.log(await this.sidenavService.getViewMenu())
+  }
 }

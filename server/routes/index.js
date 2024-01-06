@@ -1,15 +1,19 @@
-const PathController = require(ROOT + '/server/src/controllers/pathController')
+const TableController = require(ROOT + '/server/src/controllers/TableController')
 
 module.exports = (app) => {
-    app.route(['/', '/base-converter']).get((req, res) => {
+    app.route('*').get((req, res) => {
         res.sendFile(ROOT + '/client/dist/webtoolkit/browser/index.html')
         return
     })
 
-    app.route('/api/getMstMenu').post(async (req, res) => {
-        const pathController = new PathController()
-        const result = await pathController.main()
-        res.json({result: result})
+    app.route('/api/get/table/:tableName').post(async (req, res) => {
+        const params = req.params
+
+        const tableController = new TableController()
+        await tableController.init()
+        const result = await tableController.main(params.tableName)
+
+        res.json({ result: result })
         return
     })
 }
