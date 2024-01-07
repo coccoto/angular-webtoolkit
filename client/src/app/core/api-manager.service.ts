@@ -12,22 +12,22 @@ export class ApiManagerService {
   constructor(private http: HttpClient) { }
 
   get(endpoint: string): Promise<any> {
-    const result = this.http.get(this.origin + endpoint)
-    return firstValueFrom(result)
+    const response = this.http.get(this.origin + endpoint)
+    return firstValueFrom(response)
   }
 
   post(endpoint: string, data: any): Promise<any> {
-    const result = this.http.post(this.origin + endpoint, data)
-    return firstValueFrom(result)
+    const response = this.http.post(this.origin + endpoint, data)
+    return firstValueFrom(response)
   }
 
   put(endpoint: string, data: any): Promise<any> {
-    const result = this.http.put(this.origin + endpoint, data)
-    return firstValueFrom(result)
+    const response = this.http.put(this.origin + endpoint, data)
+    return firstValueFrom(response)
   }
 
   delete(endpoint: string): Promise<any> {
-    const result = this.http.delete(this.origin + endpoint)
-    return firstValueFrom(result)
+    const response = this.http.delete(this.origin + endpoint)
+    return firstValueFrom(response)
   }
 }

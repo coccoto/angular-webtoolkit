@@ -37,7 +37,7 @@ const onError = (error) => {
 
 const onListening = () => {
     const address = server.address()
-    console.log('port: ' + address.port)
+    console.log('Local: ' + 'http://localhost:' + address.port + '/')
 }
 
 /**

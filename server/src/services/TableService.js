@@ -9,7 +9,7 @@ module.exports = class {
 
     async getViewMenu() {
         const result = await this.dbManager.select(ViewMenu.selectAll)
-        const viewMenuModel = new ViewMenuModel(result[0])
-        return viewMenuModel
+        const viewMenuModels = result.map(record => new ViewMenuModel(record))
+        return viewMenuModels
     }
 }
