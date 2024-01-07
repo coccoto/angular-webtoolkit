@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 // service
 import { SidenavService } from '@/app/shared/sidenav/sidenav.service'
 // interface
+import { ApiResponseInterface } from '@/app/shared/interface/api-response.interface'
 import { ViewMenuInterface } from '@/app/shared/interface/view-menu.interface'
-
-import {MatListModule} from '@angular/material/list';
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [MatListModule],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.sass'
 })
@@ -22,22 +22,7 @@ export class SidenavComponent {
   }
 
   async assembleMenu() {
-    // const apiResponse: ApiResponseInterface<ViewMenuInterface> = await this.sidenavService.getViewMenu()
-    
-    const test: ViewMenuInterface = {
-      system_name: '',
-      screen_name: '進数変換',
-      origin: '',
-      path: '',
-    }
-    const test2: ViewMenuInterface = {
-      system_name: '',
-      screen_name: '文字数カウント',
-      origin: '',
-      path: '',
-    }
-
-    // this.menuItems = apiResponse.result
-    this.menuItems = [test, test2]
+    const apiResponse: ApiResponseInterface<ViewMenuInterface> = await this.sidenavService.getViewMenu()
+    this.menuItems = apiResponse.result
   }
 }

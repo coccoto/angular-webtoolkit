@@ -3,7 +3,7 @@
         <div class='head'>Tools</div>
         <div class='wrapper-menu-item'>
             @for (menuItem of menuItems; track $index) {
-                <div class='menu-item'><a href="...">{{ menuItem.screen_name }}</a></div>
+                <a routerLink='{{ menuItem.path }}' class='menu-item' routerLinkActive='menu-item--selected'>{{ menuItem.screen_name }}</a>
             }
         </div>
     </div>
