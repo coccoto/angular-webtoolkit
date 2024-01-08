@@ -26,12 +26,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/resources",
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "src/styles.sass"
+              "src/assets/styles/custom-theme.scss",
+              "src/assets/styles/styles.sass"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -92,11 +91,10 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "sass",
             "assets": [
-              "src/resources",
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/assets/styles/styles.sass"
             ],
             "scripts": []
           }
