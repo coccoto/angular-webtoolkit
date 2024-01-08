@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiOrigin: 'http://localhost:3200/',
+    apiOrigin: 'https://webtoolkit.coccoto.com/',
 }
