@@ -3,8 +3,7 @@ export interface BaseInputFormInterface {
     octal: string;
     decimal: string;
     hexadecimal: string;
-  }
-  
+}
 export const initializeBaseInputForm = ():BaseInputFormInterface => {
     return {
         binary: '',

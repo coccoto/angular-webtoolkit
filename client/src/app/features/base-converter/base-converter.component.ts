@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 // component
-import { InputFieldComponent } from '@/app/shared/input-field/input-field.component'
+import { InputFieldComponent } from '@src/app/shared/input-field/input-field.component'
 // service
-import { BaseConverterService } from '@/app/features/base-converter/base-converter.service'
+import { BaseConverterService } from '@src/app/features/base-converter/base-converter.service'
 // interface
-import { BaseInputFormInterface, initializeBaseInputForm } from '@/app/features/base-converter/base-converter.interface'
-import { InputFieldResultInterface } from '@/app/shared/input-field/input-field.interface'
+import { BaseInputFormInterface, initializeBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
+import { InputFieldResultInterface } from '@src/app/shared/input-field/input-field.interface'
 
 @Component({
   selector: 'app-base-converter',
   standalone: true,
-  imports: [InputFieldComponent],
+  imports: [
+    // component
+    InputFieldComponent
+  ],
   templateUrl: './base-converter.component.html',
   styleUrl: './base-converter.component.sass'
 })

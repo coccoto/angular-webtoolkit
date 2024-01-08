@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 // core
-import { ApiManagerService } from '@/app/core/api-manager.service'
+import { ApiManagerService } from '@src/app/core/api-manager.service'
 // interface
-import { ApiResponseInterface } from '@/app/shared/interface/api-response.interface'
-import { ViewMenuInterface } from '@/app/shared/interface/view-menu.interface'
+import { ApiResponseInterface } from '@src/app/interface/api-response.interface'
+import { ViewMenuInterface } from '@src/app/interface/view-menu.interface'
 
 @Injectable({
   providedIn: 'root'

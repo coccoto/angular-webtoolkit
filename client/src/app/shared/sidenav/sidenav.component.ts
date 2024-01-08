@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 // service
-import { SidenavService } from '@/app/shared/sidenav/sidenav.service'
+import { SidenavService } from '@src/app/shared/sidenav/sidenav.service'
 // interface
-import { ApiResponseInterface } from '@/app/shared/interface/api-response.interface'
-import { ViewMenuInterface } from '@/app/shared/interface/view-menu.interface'
+import { ApiResponseInterface } from '@src/app/interface/api-response.interface'
+import { ViewMenuInterface } from '@src/app/interface/view-menu.interface'
 
 @Component({
   selector: 'app-sidenav',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.sass'
 })

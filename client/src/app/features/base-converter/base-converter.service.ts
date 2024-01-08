@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // interface
-import { BaseInputFormInterface, initializeBaseInputForm } from '@/app/features/base-converter/base-converter.interface'
+import { BaseInputFormInterface, initializeBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
 
 @Injectable({
   providedIn: 'root'

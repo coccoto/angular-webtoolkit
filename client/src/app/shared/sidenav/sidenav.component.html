@@ -1,6 +1,6 @@
 <div class='container'>
-    <div class='wrapper-section'>
-        <div class='head'>Tools</div>
+    <div class='wrapper-location'>
+        <h2>Tools</h2>
         <div class='wrapper-menu-item'>
             @for (menuItem of menuItems; track $index) {
                 @if (menuItem.location_no === 1) {
@@ -9,8 +9,8 @@
             }
         </div>
     </div>
-    <div class='wrapper-section'>
-        <div class='head'>Others</div>
+    <div class='wrapper-location'>
+        <h2 class='head'>Others</h2>
         <div class='wrapper-menu-item'>
             @for (menuItem of menuItems; track $index) {
                 @if (menuItem.location_no === 2) {

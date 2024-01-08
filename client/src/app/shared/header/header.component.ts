@@ -1,17 +1,16 @@
 import { Component, Input } from '@angular/core';
-// Angular Material
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
+// @angular/material
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    MatIconModule,
-    MatButtonModule,
+    // @angular/material
     MatToolbarModule,
+    MatIconModule,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.sass'
