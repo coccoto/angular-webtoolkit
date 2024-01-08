@@ -15,6 +15,7 @@ export class BaseConverterService {
     if (isNaN(decimalValue)) {
        return initializeBaseInputForm()
     }
+
     return {
       binary: decimalValue.toString(2),
       octal: decimalValue.toString(8),

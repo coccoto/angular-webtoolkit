@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { firstValueFrom } from 'rxjs'
+// environment
+import { environment } from '@src/environments/environment'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiManagerService {
 
-  private origin: string = 'http://localhost:3200'
+  private origin: string = environment.apiOrigin
 
   constructor(private http: HttpClient) { }
 

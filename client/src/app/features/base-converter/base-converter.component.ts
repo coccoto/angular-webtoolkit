@@ -21,6 +21,7 @@ export class BaseConverterComponent {
 
   constructor(private baseConverterService: BaseConverterService) { }
 
+  // define baseInputForm
   baseInputForm: BaseInputFormInterface = initializeBaseInputForm()
 
   baseConvert(targetObject: InputFieldResultInterface): void {

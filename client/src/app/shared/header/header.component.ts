@@ -16,11 +16,11 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrl: './header.component.sass'
 })
 export class HeaderComponent {
-  @Input() sidenav: MatSidenav | undefined;
+  @Input() menu: MatSidenav | undefined;
 
   handleMenuClick(): void {
-    if (this.sidenav !== undefined) {
-      this.sidenav.toggle()
+    if (this.menu !== undefined) {
+      this.menu.toggle()
     }
   }
 }

@@ -6,8 +6,7 @@ import { HeaderComponent } from '@src/app/shared/header/header.component'
 import { SidenavComponent } from '@src/app/shared/sidenav/sidenav.component'
 import { BaseConverterComponent } from '@src/app/features/base-converter/base-converter.component'
 // @angular/material
-import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav'
 
 @Component({
   selector: 'app-root',
@@ -26,5 +25,5 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
   styleUrl: './app.component.sass',
 })
 export class AppComponent {
-  @ViewChild('sidenav') sidenav: MatSidenav | undefined;
+  @ViewChild('menu') menu: MatSidenav | undefined
 }

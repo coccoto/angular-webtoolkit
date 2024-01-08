@@ -2,11 +2,11 @@
   "name": "webtoolkit",
   "version": "0.0.0",
   "scripts": {
-    "build": "ng build",
-    "build:watch": "ng build --watch",
-    "dev-server": "ng serve",
-    "release": "run-s release:clean build",
+    "build": "ng build --configuration development --watch",
+    "dev-server": "ng serve --configuration development",
+    "release": "run-s release:clean release:production",
     "release:clean": "rimraf dist",
+    "release:production": "ng build --configuration production --verbose",
     "test": "ng test"
   },
   "private": true,

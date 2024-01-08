@@ -13,8 +13,7 @@ export class SidenavService {
   constructor(private apiManagerService: ApiManagerService) { }
 
   async getViewMenu(): Promise<ApiResponseInterface<ViewMenuInterface>> {
-    const response = await this.apiManagerService.post('/api/get/table/view-menu', {})
-    const apiResponse: ApiResponseInterface<ViewMenuInterface> = response as ApiResponseInterface<ViewMenuInterface>
-    return apiResponse
+    const response = await this.apiManagerService.post('api/get/table/view-menu', {})
+    return response as ApiResponseInterface<ViewMenuInterface>
   }
 }
