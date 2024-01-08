@@ -5,5 +5,6 @@ module.exports = class {
         this.screen_name = data.screen_name
         this.origin = data.origin
         this.path = data.path
+        this.location_no = data.location_no
     }
 }

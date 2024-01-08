@@ -25,7 +25,5 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
   styleUrl: './app.component.sass',
 })
 export class AppComponent {
-  title = 'webtoolkit';
-
   @ViewChild('sidenav') sidenav: MatSidenav | undefined;
 }

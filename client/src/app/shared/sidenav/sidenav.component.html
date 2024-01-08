@@ -3,7 +3,19 @@
         <div class='head'>Tools</div>
         <div class='wrapper-menu-item'>
             @for (menuItem of menuItems; track $index) {
-                <a routerLink='{{ menuItem.path }}' class='menu-item' routerLinkActive='menu-item--selected'>{{ menuItem.screen_name }}</a>
+                @if (menuItem.location_no === 1) {
+                    <a routerLink='{{ menuItem.path }}' class='menu-item' routerLinkActive='menu-item--selected'>{{ menuItem.screen_name }}</a>
+                }
+            }
+        </div>
+    </div>
+    <div class='wrapper-section'>
+        <div class='head'>Others</div>
+        <div class='wrapper-menu-item'>
+            @for (menuItem of menuItems; track $index) {
+                @if (menuItem.location_no === 2) {
+                    <a href='{{ menuItem.origin }}' class='menu-item'>{{ menuItem.system_name }}</a>
+                }
             }
         </div>
     </div>

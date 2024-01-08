@@ -3,6 +3,7 @@ export interface ViewMenuInterface {
     screen_name: string,
     origin: string,
     path: string,
+    location_no: number,
 }
 export const initializeViewMenu = ():ViewMenuInterface => {
     return {
@@ -10,5 +11,6 @@ export const initializeViewMenu = ():ViewMenuInterface => {
         screen_name: '',
         origin: '',
         path: '',
+        location_no: 0,
     }
 }
