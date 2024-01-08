@@ -8,6 +8,11 @@ const path = require('path')
 global.ROOT = path.resolve(__dirname, '..', '..')
 
 /**
+ * logger setup
+ */
+const logger = require(ROOT + '/server/core/Logger')
+
+/**
  * module setup
  */
 const http = require('http')
@@ -32,12 +37,12 @@ const server = http.createServer(app)
  * Error handle
  */
 const onError = (error) => {
-    console.log(error)
+    logger.error(error)
 }
 
 const onListening = () => {
     const address = server.address()
-    console.log('Local: ' + 'http://localhost:' + address.port + '/')
+    logger.info('Local: ' + 'http://localhost:' + address.port + '/')
 }
 
 /**

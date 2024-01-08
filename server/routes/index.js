@@ -1,3 +1,4 @@
+const logger = require(ROOT + '/server/core/Logger')
 const TableController = require(ROOT + '/server/src/controllers/TableController')
 
 module.exports = (app) => {
@@ -9,11 +10,17 @@ module.exports = (app) => {
     app.route('/api/get/table/:tableName').post(async (req, res) => {
         const params = req.params
 
-        const tableController = new TableController()
-        await tableController.init()
-        const result = await tableController.main(params.tableName)
+        try {
+            const tableController = new TableController()
+            await tableController.init()
 
-        res.json({ result: result })
-        return
+            const result = await tableController.main(params.tableName)
+            res.json({ result: result })
+            return
+    
+        } catch (error) {
+            logger.error('Error in /api/get/table/' + params.tableName + ' route. Error: ' + error.message)
+            return
+        }
     })
 }

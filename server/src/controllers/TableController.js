@@ -4,17 +4,28 @@ const TableService = require(ROOT + '/server/src/services/TableService')
 module.exports = class extends BaseController {
 
     async getViewMenu() {
-        const tableService = new TableService(this.dbManager)
-        const result = await tableService.getViewMenu()
-        return result
+        try {
+            const tableService = new TableService(this.dbManager)
+            const result = await tableService.getViewMenu()
+            return result
+        } catch (error) {
+            this.logger.error('An exception occurred. Error: ' + error.message)
+            throw error;
+        }
     }
 
     async main(tableName) {
-        switch (tableName) {
-            case 'view-menu':
-                return await this.getViewMenu()
-            default:
-                throw new Error('ERROR: Invalid tableName.')
+        try {
+            switch (tableName) {
+                case 'view-menu':
+                    return await this.getViewMenu()
+                default:
+                    throw new Error('Invalid tableName.')
+            }
+        } catch (error) {
+            this.logger.error('An exception occurred. Error: ' + error.message)
+            throw error;
         }
+        
     }
 }

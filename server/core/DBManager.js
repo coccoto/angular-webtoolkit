@@ -1,4 +1,5 @@
 const mysql = require('mysql2/promise')
+const logger = require(ROOT + '/server/core/Logger')
 const dotenv = require('dotenv')
 
 module.exports = class {
@@ -9,23 +10,22 @@ module.exports = class {
 
     async connect() {
         try {
-            const env = dotenv.config().parsed
+            const env = dotenv.config()
 
-            if (env === undefined) {
-                throw new Error('ERROR: Failed to load the .env file.')
+            if (env.error) {
+                throw new Error(env.error)
             }
 
             const conn = await mysql.createConnection({
-                host: env['HOST'],
-                user: env['USER'],
-                password: env['PASSWORD'],
-                database: env['DATABASE'],
+                host: env.parsed['HOST'],
+                user: env.parsed['USER'],
+                password: env.parsed['PASSWORD'],
+                database: env.parsed['DATABASE'],
             })
             this.db = conn
 
         } catch (error) {
-            console.error('ERROR: Failed to connect to database.')
-            console.error(error.message)
+            logger.error('Failed to connect to database. Error: ' + error.message)
             throw error
         }
     }
@@ -33,14 +33,13 @@ module.exports = class {
     async select(query) {
         try {
             if (this.db === null) {
-                throw new Error('ERROR: Database connection is not established.')
+                throw new Error('Database connection is not established.')
             }
             const [rows] = await this.db.execute(query)
             return rows
 
         } catch (error) {
-            console.error('ERROR: Failed to execute the SELECT.');
-            console.error(error.message);
+            logger.error('Failed to execute the SELECT. Error: ' + error.message)
             throw error;
         }
     }
