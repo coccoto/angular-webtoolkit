@@ -38,11 +38,10 @@ $webtoolkit-dark-theme: mat.define-dark-theme((
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-.light-theme {
-  @include mat.all-component-themes($webtoolkit-light-theme);
-}
+@include mat.all-component-themes($webtoolkit-light-theme);
+
 .dark-theme {
-  @include mat.all-component-themes($webtoolkit-dark-theme);
+  @include mat.all-component-colors($webtoolkit-dark-theme);
 }
 
 
