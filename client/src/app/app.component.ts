@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { RouterOutlet } from '@angular/router'
 // component
 import { HeaderComponent } from '@src/app/shared/header/header.component'
+import { FooterComponent } from '@src/app/shared/footer/footer.component'
 import { SidenavComponent } from '@src/app/shared/sidenav/sidenav.component'
 import { BaseConverterComponent } from '@src/app/features/base-converter/base-converter.component'
 // context
@@ -20,6 +21,7 @@ import { MatSidenav, MatSidenavModule, MatDrawerMode } from '@angular/material/s
     RouterOutlet,
     // component
     HeaderComponent,
+    FooterComponent,
     SidenavComponent,
     BaseConverterComponent,
     // @angular/material

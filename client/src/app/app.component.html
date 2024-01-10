@@ -1,11 +1,14 @@
 <div class='container'>
     <app-header [menu]='menu'></app-header>
-    <mat-sidenav-container class='wrapper'>
+    <mat-sidenav-container class='wrapper-main'>
         <mat-sidenav #menu [mode]='menuMode'>
             <app-sidenav></app-sidenav>
         </mat-sidenav>
-        <mat-sidenav-content class='content'>
-            <router-outlet></router-outlet>
+        <mat-sidenav-content>
+            <div class='application'>
+                <router-outlet></router-outlet>
+            </div>
+            <app-footer></app-footer>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
