@@ -1,4 +1,5 @@
 const winston = require('winston')
+const DailyRotateFile = require('winston-daily-rotate-file')
 const dotenv = require('dotenv')
 
 const env = dotenv.config()
@@ -12,11 +13,17 @@ const transports = () => {
         case 'development':
             return [
                 new winston.transports.Console(),
-                new winston.transports.File({ filename: env.parsed['LOG_DIR'] + '/development.log' })
+                new DailyRotateFile({
+                    filename: env.parsed['LOG_DIR'] + '/%DATE%.log',
+                    datePattern: 'YYYY-MM',
+                }),
             ]
         case 'production':
             return [
-                new winston.transports.File({ filename: env.parsed['LOG_DIR'] + '/production.log' })
+                new DailyRotateFile({
+                    filename: env.parsed['LOG_DIR'] + '/%DATE%.log',
+                    datePattern: 'YYYY-MM',
+                }),
             ]
         default:
             throw new Error("[ERROR] Invalid environment. env['ENVIRONMENT']: " + env.parsed['ENVIRONMENT']);
@@ -26,8 +33,10 @@ const transports = () => {
 const logger = winston.createLogger({
     level: 'info',
     format: winston.format.combine(
-        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
-        winston.format.json(),
+        winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+        winston.format.printf(({ level, message, timestamp }) => {
+            return JSON.stringify({timestamp: timestamp, level: level, message: message})
+        }),
     ),
     transports: transports()
 })
