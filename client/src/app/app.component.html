@@ -1,7 +1,7 @@
 <div class='container'>
     <app-header [menu]='menu'></app-header>
     <mat-sidenav-container class='wrapper'>
-        <mat-sidenav #menu mode='side'>
+        <mat-sidenav #menu [mode]='menuMode'>
             <app-sidenav></app-sidenav>
         </mat-sidenav>
         <mat-sidenav-content class='content'>

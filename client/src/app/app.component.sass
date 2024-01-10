@@ -1,3 +1,5 @@
+@use '@src/app/assets/styles/utils/mixins.sass'
+
 .container
     display: flex
     flex-direction: column
@@ -11,4 +13,7 @@
     flex: 1
 
 .content
-    padding: 3rem
+    padding: 2rem 1rem
+
+    @include mixins.media()
+            padding: 3rem
