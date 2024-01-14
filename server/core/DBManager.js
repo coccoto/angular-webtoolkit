@@ -30,6 +30,19 @@ module.exports = class {
         }
     }
 
+    async disconnect() {
+        try {
+            if (this.db === null) {
+                throw new Error('No active database connection to disconnect.')
+            }
+            await this.db.end()
+
+        } catch (error) {
+            logger.error('Failed to disconnect from the database. Error: ' + error.message)
+            throw error
+        }
+    }
+
     async select(query) {
         try {
             if (this.db === null) {

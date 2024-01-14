@@ -13,8 +13,6 @@ module.exports = (app) => {
 
         try {
             const tableController = new TableController()
-            await tableController.init()
-
             const result = await tableController.main(params.tableName)
             res.json({ result: result })
             return
