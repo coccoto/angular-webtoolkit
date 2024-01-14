@@ -28,17 +28,17 @@ export class HeaderComponent {
 
   ngOnInit() {
     if (this.appContextService.isPc) {
-      this.handleMenuClick()
+      this.handleClickMenu()
     }
   }
 
-  handleMenuClick(): void {
+  handleClickMenu(): void {
     if (this.menu !== undefined) {
       this.menu.toggle()
     }
   }
 
-  handleContrastClick(): void {
+  handleClickContrast(): void {
     const elemBody = this.elementRef.nativeElement.ownerDocument.body
 
     if (elemBody.classList.contains('light-theme')) {

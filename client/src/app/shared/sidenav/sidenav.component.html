@@ -1,22 +1,22 @@
 <div class='container'>
-    <div class='wrapper-location'>
+    <div>
         <h2>Tools</h2>
-        <div class='wrapper-menu-item'>
+        <mat-nav-list>
             @for (menuItem of menuItems; track $index) {
-                @if (menuItem.location_no === 1) {
-                    <a routerLink='{{ menuItem.path }}' class='menu-item' routerLinkActive='menu-item--selected'>{{ menuItem.screen_name }}</a>
+                @if (menuItem.section_no === 1) {
+                    <a mat-list-item routerLink='{{ menuItem.path }}' class='menu-item' routerLinkActive='menu-item--selected'>{{ menuItem.screen_name }}</a>
                 }
             }
-        </div>
+        </mat-nav-list>
     </div>
-    <div class='wrapper-location'>
+    <div>
         <h2>Others</h2>
-        <div class='wrapper-menu-item'>
+        <mat-nav-list>
             @for (menuItem of menuItems; track $index) {
-                @if (menuItem.location_no === 2) {
-                    <a href='{{ menuItem.origin }}' class='menu-item'>{{ menuItem.system_name }}</a>
+                @if (menuItem.section_no === 2) {
+                    <a mat-list-item href='{{ menuItem.origin }}'>{{ menuItem.system_name }}</a>
                 }
             }
-        </div>
+        </mat-nav-list>
     </div>
 </div>
