@@ -6,7 +6,7 @@
     "dev-server": "ng serve --configuration development",
     "release": "run-s release:clean release:production",
     "release:clean": "rimraf dist",
-    "release:production": "ng build --configuration production --verbose",
+    "release:production": "node --max_old_space_size=4096 ./node_modules/@angular/cli/bin/ng build --configuration production --verbose",
     "test": "ng test"
   },
   "private": true,
