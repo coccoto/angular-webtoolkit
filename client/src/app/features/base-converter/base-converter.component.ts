@@ -4,7 +4,7 @@ import { InputFieldComponent } from '@src/app/shared/input-field/input-field.com
 // service
 import { BaseConverterService } from '@src/app/features/base-converter/base-converter.service'
 // interface
-import { BaseInputFormInterface, initializeBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
+import { BaseInputFormInterface, initBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
 import { InputFieldResultInterface } from '@src/app/shared/input-field/input-field.interface'
 
 @Component({
@@ -22,7 +22,7 @@ export class BaseConverterComponent {
   constructor(private baseConverterService: BaseConverterService) { }
 
   // define baseInputForm
-  baseInputForm: BaseInputFormInterface = initializeBaseInputForm()
+  baseInputForm: BaseInputFormInterface = initBaseInputForm()
 
   baseConvert(targetObject: InputFieldResultInterface): void {
     this.baseInputForm = this.baseConverterService.baseConvert(Number(targetObject.elemName), targetObject.inputValue)

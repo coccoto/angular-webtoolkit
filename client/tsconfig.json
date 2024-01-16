@@ -24,7 +24,7 @@
       "dom"
     ],
     "baseUrl": "./",
-    "paths": { "@src/*": ["src/*"] },
+    "paths": { "@src/*": ["./src/*"] },
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -5,7 +5,7 @@ export interface ViewMenuInterface {
     path: string,
     section_no: number,
 }
-export const initializeViewMenu = ():ViewMenuInterface => {
+export const initViewMenu = (): ViewMenuInterface => {
     return {
         system_name: '',
         screen_name: '',

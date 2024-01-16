@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // interface
-import { BaseInputFormInterface, initializeBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
+import { BaseInputFormInterface, initBaseInputForm } from '@src/app/features/base-converter/base-converter.interface'
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BaseConverterService {
     const decimalValue: number = parseInt(targetValue, baseNumber)
 
     if (isNaN(decimalValue)) {
-       return initializeBaseInputForm()
+       return initBaseInputForm()
     }
 
     return {
